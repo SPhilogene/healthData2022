@@ -70,7 +70,7 @@ var zipData = new Array(); //
 
 var languageGroup = new L.featureGroup();
 // homeLanguage LAYER ADD
-var languageLayer = $.getJSON("Brooklyn_Language.geojson", function(data) {
+var languageLayer = $.getJSON("https://github.com/SPhilogene/healthData2022/blob/main/Brooklyn_Language.geojson", function(data) {
 
     L.geoJson(data, {
         style: style,
@@ -126,7 +126,7 @@ languageLegend.addTo(mymap);
 
 //=========================================================== PLACES ZIP CODE LEVEL =================================================================
 
-var placesZipLayer = $.getJSON("ZIP_CODE.geojson", function(data) {
+var placesZipLayer = $.getJSON("https://github.com/SPhilogene/healthData2022/blob/main/ZIP_CODE.geojson", function(data) {
     var codes = new Array(); //ordered zip codes empty array
 
     L.geoJson(data, {
@@ -405,7 +405,7 @@ displayData.shift()
 // PLACES TRACT LEVEL GEOJSON
 var tractGroup = new L.layerGroup();
 
-var placesTractLayer = $.getJSON("PLACEStract_FeaturesToJSON.geojson", function(data) {
+var placesTractLayer = $.getJSON("https://github.com/SPhilogene/healthData2022/blob/main/PLACEStract_FeaturesToJSON.geojson", function(data) {
     L.geoJson(data, {
         style: styleCancer,
         onEachFeature: function(feature, layer) {
@@ -455,7 +455,7 @@ function openCity(evt, cityName) {
 // PLACES TRACT LEVEL GEOJSON
 var zipOutlines = new L.layerGroup();
 
-var zipOutlines_layer = $.getJSON("ZIP_CODE_outlines.geojson", function(data) {
+var zipOutlines_layer = $.getJSON("https://github.com/SPhilogene/healthData2022/blob/main/ZIP_CODE_outlines.geojson", function(data) {
     L.geoJson(data, {
         style: styleZIP,
         interactive: false
